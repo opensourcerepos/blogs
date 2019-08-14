@@ -1,0 +1,18 @@
+{
+  "name": "opensourcerepos-blogs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "private": true,
+  "author": "Santosh G <santoshg.dev@gmail.com> (@sant0shg)",
+  "license": "MIT",
+  "scripts": {
+    "develop": "gatsby develop",
+    "build": "gatsby build"
+  },
+  "dependencies": {
+    "@opensourcerepos/opensourcerepos-theme": "^1.0.2",
+    "gatsby": "^2.13.50",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  }
+}
