@@ -10,7 +10,7 @@
     "build": "gatsby build"
   },
   "dependencies": {
-    "@opensourcerepos/opensourcerepos-theme": "^1.0.2",
+    "@opensourcerepos/gatsby-theme-opensourcerepos": "^1.0.0",
     "gatsby": "^2.13.50",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"

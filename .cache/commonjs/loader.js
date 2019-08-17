@@ -29,7 +29,6 @@ const createPageDataUrl = path => {
 const doFetch = (url, method = `GET`) => new Promise((resolve, reject) => {
   const req = new XMLHttpRequest();
   req.open(method, url, true);
-  req.withCredentials = true;
 
   req.onreadystatechange = () => {
     if (req.readyState == 4) {
@@ -107,7 +106,7 @@ const loadPageDataJson = loadObj => {
 };
 
 const doesConnectionSupportPrefetch = () => {
-  if (`connection` in navigator) {
+  if (`connection` in navigator && typeof navigator.connection !== `undefined`) {
     if ((navigator.connection.effectiveType || ``).includes(`2g`)) {
       return false;
     }
