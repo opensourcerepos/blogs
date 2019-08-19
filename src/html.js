@@ -12,6 +12,15 @@ export default function HTML(props) {
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
         {props.headComponents}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-141552683-1"></script>
+        <script
+            dangerouslySetInnerHTML={{
+              __html: `window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'UA-141552683-1');`}}>      
+        </script>
       </head>
       <body {...props.bodyAttributes}>
         {props.preBodyComponents}
@@ -24,6 +33,7 @@ export default function HTML(props) {
           dangerouslySetInnerHTML={{ __html: props.body }}
         />
         {props.postBodyComponents}
+          
         <script
           dangerouslySetInnerHTML={{
             __html: `window.twttr = (function(d, s, id) {
@@ -41,18 +51,7 @@ export default function HTML(props) {
               };
             
               return t;
-            }(document, "script", "twitter-wjs"));
-
-            <!-- Global site tag (gtag.js) - Google Analytics -->
-            <script async src="https://www.googletagmanager.com/gtag/js?id=UA-141552683-1"></script>
-            <script>
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-
-              gtag('config', 'UA-141552683-1');
-            </script>
-                `,
+            }(document, "script", "twitter-wjs"));`,
           }}
         />
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
