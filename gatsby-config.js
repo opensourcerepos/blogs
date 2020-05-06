@@ -3,7 +3,7 @@ module.exports = {
   plugins: [{ 
     resolve: `@opensourcerepos/gatsby-theme-opensourcerepos`, 
     options: {
-      path: `${__dirname}/src/repository-blogs/`,
+      path: `${__dirname}/src/repository-blogs`,
     } 
   }],
   siteMetadata: {
